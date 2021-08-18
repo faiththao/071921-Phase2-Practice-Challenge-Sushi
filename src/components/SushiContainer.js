@@ -16,9 +16,11 @@ function SushiContainer({sushi, eatSushi}) {
     <div className="belt">
       {/* Render Sushi components here! */}
       {sushiPlates}
-      {/* sushi.map((nigiri) => (
+      {/* {sushi
+      .slice(showSushi, showSushi + 4)
+      .map((nigiri) => (
         <Sushi key={nigiri.id} nigiri={nigiri} eatSushi={eatSushi}/>
-      )) */}
+      ))} */}
       <MoreButton onClickMore={clickMore}/>
     </div>
   );
