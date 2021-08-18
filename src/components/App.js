@@ -7,6 +7,8 @@ const API = "http://localhost:3001/sushis";
 function App() {
   const [sushi, setSushi] = useState([])
   const [money, setMoney] =useState(70)
+  //sushi doesn't show up after clicking on it
+  const eatenSushi = sushi.filter(nigiri => nigiri.eaten)
 
 //money gets taken after clicking on sushi plate 
 function eatSushi(eatenSushi) {
@@ -19,8 +21,6 @@ function eatSushi(eatenSushi) {
     setMoney((money) => money - eatenSushi.price)
   }
 }
-//sushi doesn't show up after clicking on it
-const eatenSushi = sushi.filter(nigiri => nigiri.eaten)
 
 //fetch api data 
   useEffect(() => {
